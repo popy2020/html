@@ -1,0 +1,15 @@
+                  <label>product</label>
+                        <select name="product" class="form-control" <?php echo $category['product'];?>>
+                          <?php foreach($product as $product) {?>
+                          <option value=<?php echo '"'.$product['id'].'"'?>><?php echo $product['name'];?></option>
+                           <?php }?>
+                        </select>
+                      </div>
+                      <div class="form-group">
+                        <label>restoran</label>
+                        <select name="restoran" class="form-control"  <?php echo $category['product'];?>>
+                        <?php foreach($restoran->fetchAll() as $restoran) {?>
+                          <option value=<?php echo '"'.$restoran['id'].'"'?>><?php echo $restoran['name'];?></option>
+                         <?php }?> 
+                        </select>
+                      </div>
